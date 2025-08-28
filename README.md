@@ -1,5 +1,5 @@
 # Mercer
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/mihirb23/mercer)
+
 
 Mercer is an intelligent chatbot designed to help you understand your insurance documents. Upload a policy PDF, ask questions in plain English, and receive AI-powered answers complete with source citations from the original document.
 
