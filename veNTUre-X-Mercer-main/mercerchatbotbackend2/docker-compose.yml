@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: mercerchatbot-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app
+      - ./data/uploads:/data/uploads
+      - ./secrets/long-micron-466922-i0-f1361b3efc37.json:/secrets/long-micron-466922-i0-f1361b3efc37.json:ro
+    environment:
+      - UPLOAD_ROOT=/data/uploads
+      - GCS_BUCKET=
+      - GOOGLE_APPLICATION_CREDENTIALS=
+      - GPU_BACKEND_URL= # example: https://abcd1234.ngrok.io/ingest-and-answer
+      - GPU_BEARER_TOKEN=
+      - GPU_TIMEOUT_SEC=
+    restart: unless-stopped
